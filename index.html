@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Estoque</h1>
+        
+        <div class="form-section">
+            <h2>Adicionar Produto</h2>
+            <input type="text" id="tipo de produto" placeholder="Tipo de Produto">
+            <input type="text" id="medida/tamanho" placeholder="Medida/tamanho">
+            <input type="text" id="preco" placeholder="Preço">
+            <input type="text" id="marca" placeholder="Marca">
+            <input type="number" id="codigo do produto" placeholder="Codigo do Produto">
+            <input type="date" id="modelo" placeholder="Modelo">
+            <button onclick="adicionarProduto()">Adicionar Produto</button>
+        </div>
+
+        <div class="search-section">
+            <h2>Buscar Produto</h2>
+            <input type="text" id="nomeBusca" placeholder="Nome do Produto">
+            <button onclick="buscarProduto()">Buscar</button>
+            <div id="resultadoBusca"></div>
+        </div>
+
+        <div class="list-section">
+            <h2>Lista de Produtos</h2>
+            <button onclick="listarProdutos()">Mostrar Produtos</button>
+            <div id="listaProdutos"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
