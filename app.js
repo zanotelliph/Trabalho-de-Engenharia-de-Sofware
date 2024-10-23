@@ -8,8 +8,12 @@ function adicionarProduto() {
     const codigodoProduto = document.getElementById('codigo do produto').value;
     const modelo = document.getElementById('modelo').value;
     const quantidade = document.getElementById('modelo').value;
+    const numeroNotaFiscal = document.getElementById('Numero Nota Fiscal').value;
+    const dataEmissao = document.getElementById('Data Emissão').value;
+    const formadePagamento = document.getElementById('Forma de Pagamento').value;
+    const valorTotal = document.getElementById('Valor Total').value;
 
-    if (tipodeProduto && medidatamanho && preço && marca && codigodoProduto && modelo && quantidade) {
+    if (tipodeProduto && medidatamanho && formadePagamento && preço && marca && codigodoProduto && modelo && quantidade && numeroNotaFiscal && dataEmissao) {
         const produto = {
             tipodeProduto,
             medidatamanho,
@@ -17,7 +21,11 @@ function adicionarProduto() {
             marca,
             codigodoProduto,
             modelo,
-            quantidade
+            quantidade,
+            numeroNotaFiscal,
+            dataEmissao,
+            formadePagamento,
+            valorTotal
         };
 
         produtos.push(produto);
@@ -43,7 +51,13 @@ function buscarProduto() {
             <p><strong>Quantidade em Estoque:</strong> ${produto.quantidade}</p>
             <p><strong>Marca:</strong> ${produto.marca}</p>
             <p><strong>Modelo:</strong> ${produto.modelo}</p>
-            <p><strong>Preço unitário:</strong> ${produto.dataCadastro}</p>
+            <p><strong>Preço unitário:</strong> ${produto.preço}</p>
+            <p><strong>Data Emissao:</strong> ${produto.dataEmissao}</p>
+            <p><strong>Numero Nota Fiscal:</strong> ${produto.numeroNotaFiscal}</p>
+            <p><strong>Forma de Pagamento:</strong> ${produto.formadePagamento}</p>
+            <p><strong>Valor Total:</strong> ${produto.valorTotal}</p>
+
+
         `;
     } else {
         resultadoBusca.innerHTML = '<p>Produto não encontrado.</p>';
@@ -65,6 +79,10 @@ function listarProdutos() {
                     <p><strong>Marca:</strong> ${produto.marca}</p>
                     <p><strong>Código do Produto:</strong> ${produto.codigodoProduto}</p>
                     <p><strong>Preço:</strong> ${produto.preço}</p>
+                    <p><strong>Data Emissão:</strong> ${produto.dataEmissao}</p>
+                    <p><strong>Numero Nota Fiscal:</strong> ${produto.numeroNotaFiscal}</p>
+                    <p><strong>Forma de Pagamento:</strong> ${produto.formadePagamento}</p>
+                    <p><strong>Valor Total:</strong> ${produto.valorTotal}</p>
                 </div>
                 <hr>
             `;
@@ -81,4 +99,11 @@ function limparCampos() {
     document.getElementById('marca').value = '';
     document.getElementById('codigodoProduto').value = '';
     document.getElementById('preço').value = '';
+    document.getElementById('Data Emissao').value = '';
+    document.getElementById('Numero Nota Fiscal').value = '';
+    document.getElementById('Forma de Pagamento').value = '';
+    document.getElementById('Valor Total').value = '';
+    
+
+    
 }
