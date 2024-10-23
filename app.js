@@ -8,7 +8,7 @@ function adicionarProduto() {
     const codigodoProduto = document.getElementById('codigo do produto').value;
     const modelo = document.getElementById('modelo').value;
     const quantidade = document.getElementById('modelo').value;
-    const numeroNotaFiscal = document.getElementById('Numero Nota Fiscal').value;
+    
     const dataEmissao = document.getElementById('Data Emissão').value;
     const formadePagamento = document.getElementById('Forma de Pagamento').value;
     const valorTotal = document.getElementById('Valor Total').value;
@@ -22,7 +22,7 @@ function adicionarProduto() {
             codigodoProduto,
             modelo,
             quantidade,
-            numeroNotaFiscal,
+            
             dataEmissao,
             formadePagamento,
             valorTotal
@@ -53,7 +53,7 @@ function buscarProduto() {
             <p><strong>Modelo:</strong> ${produto.modelo}</p>
             <p><strong>Preço unitário:</strong> ${produto.preço}</p>
             <p><strong>Data Emissao:</strong> ${produto.dataEmissao}</p>
-            <p><strong>Numero Nota Fiscal:</strong> ${produto.numeroNotaFiscal}</p>
+            
             <p><strong>Forma de Pagamento:</strong> ${produto.formadePagamento}</p>
             <p><strong>Valor Total:</strong> ${produto.valorTotal}</p>
 
@@ -80,7 +80,7 @@ function listarProdutos() {
                     <p><strong>Código do Produto:</strong> ${produto.codigodoProduto}</p>
                     <p><strong>Preço:</strong> ${produto.preço}</p>
                     <p><strong>Data Emissão:</strong> ${produto.dataEmissao}</p>
-                    <p><strong>Numero Nota Fiscal:</strong> ${produto.numeroNotaFiscal}</p>
+                    
                     <p><strong>Forma de Pagamento:</strong> ${produto.formadePagamento}</p>
                     <p><strong>Valor Total:</strong> ${produto.valorTotal}</p>
                 </div>
@@ -100,7 +100,7 @@ function limparCampos() {
     document.getElementById('codigodoProduto').value = '';
     document.getElementById('preço').value = '';
     document.getElementById('Data Emissao').value = '';
-    document.getElementById('Numero Nota Fiscal').value = '';
+    
     document.getElementById('Forma de Pagamento').value = '';
     document.getElementById('Valor Total').value = '';
     
